@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+void rearrangeColors(int&, int&, int&);
+
 int main()
 {
   //DO NOT CHANGE WITHIN THIS AREA...
@@ -9,7 +11,7 @@ int main()
   cin>>red>>green>>blue;
   //...END OF "DO NOT CHANGE" AREA
 
-
+rearrangeColors(red,green,blue);
 
 
   //DO NOT CHANGE WITHIN THIS AREA...
@@ -18,36 +20,53 @@ int main()
   return 0;
   //...END OF "DO NOT CHANGE" AREA
 }
-void rearrangeColor(int&Red, int&Green ,int&Blue)
+void rearrangeColors(int&R, int&G,int&B)
 {
-int tempRed, tempGreen ,tempBlue;
+int greatest;
+int mid;
+int least;
 
-if ( tempGreen>Red)
+if (R>=G && R>=B && G>=B)
 {
-    Red = tempGreen;
+greatest = R;
+mid = G;
+least = B;
 }
-if ( tempBlue>Red)
+else if (R>=G && R>=B && B>=G)
 {
-    Red = tempBlue;
+greatest = R;
+mid = B;
+least = G;
 }
-if ( Blue > tempRed)
+else if (G>=R && G>=B && R>=B)
 {
-    Blue = tempRed;
+greatest = G;
+mid = R;
+least = B;
 }
-if ( Blue > tempGreen)
+else if (G>=R && G>=B && B>=R)
 {
-    Blue = tempGreen;
+greatest = G;
+mid = B;
+least = R;
 }
-if( Red == tempRed && Blue == tempBlue)
+else if (B>=R && B>=G && G>=R)
 {
-    Green = tempGreen;
+greatest = B;
+mid = G;
+least = R;
 }
-if(Red == tempBlue && Blue == tempGreen)
+else if (B>=R && B>=G && R>=G)
 {
-    Green = tempRed;
+greatest = B;
+mid = R;
+least = G;
 }
-if(Red == tempGreen && Blue == tempBlue)
+else
 {
-    Green = tempRed;
+cout<<"ERROR\n";
 }
+R=greatest;
+G=mid;
+B=least;
 }
