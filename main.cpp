@@ -8,18 +8,6 @@ int main()
   cout<<"Enter Red, Green, and Blue values: ";
   cin>>red>>green>>blue;
   //...END OF "DO NOT CHANGE" AREA
-if( blue>red)
-{
-swap (blue,red);
-}
-if( blue > green);
-{
-swap (blue,green);
-}
-if ( green> red)
-{
-swap (green,red);
-}
 
 
 
@@ -30,37 +18,36 @@ swap (green,red);
   return 0;
   //...END OF "DO NOT CHANGE" AREA
 }
-/*
 void rearrangeColor(int&Red, int&Green ,int&Blue)
 {
 int tempRed, tempGreen ,tempBlue;
 
-if ( Green>Red)
+if ( tempGreen>Red)
 {
     Red = tempGreen;
 }
-if ( Blue>Red)
+if ( tempBlue>Red)
 {
     Red = tempBlue;
 }
-if ( Green = Red)
-{
-Green=0;
-}
-if((Green < tempBlue)&&(Red !=tempBlue))
-{
-    Green = tempBlue;
-}
-if((Green < tempRed)&&(Red !=tempRed))
-{
-    Green = tempRed;
-}
-if(Blue > tempRed)
+if ( Blue > tempRed)
 {
     Blue = tempRed;
 }
-if(Blue > tempGreen)
+if ( Blue > tempGreen)
 {
     Blue = tempGreen;
 }
-}*/
+if( Red == tempRed && Blue == tempBlue)
+{
+    Green = tempGreen;
+}
+if(Red == tempBlue && Blue == tempGreen)
+{
+    Green = tempRed;
+}
+if(Red == tempGreen && Blue == tempBlue)
+{
+    Green = tempRed;
+}
+}
