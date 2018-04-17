@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 int main()
 {
   //DO NOT CHANGE WITHIN THIS AREA...
@@ -29,6 +30,7 @@ swap (green,red);
   return 0;
   //...END OF "DO NOT CHANGE" AREA
 }
+/*
 void rearrangeColor(int&Red, int&Green ,int&Blue)
 {
 int tempRed, tempGreen ,tempBlue;
@@ -61,4 +63,4 @@ if(Blue > tempGreen)
 {
     Blue = tempGreen;
 }
-}
+}*/
